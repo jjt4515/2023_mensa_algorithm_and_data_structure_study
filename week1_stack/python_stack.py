@@ -26,12 +26,3 @@ class Stack :
         
     def size(self) :
         return len(self.__stack__)        
-    
-        
-    
-            
-    
-    
-    
-    
-    
