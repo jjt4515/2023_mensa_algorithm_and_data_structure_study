@@ -18,13 +18,51 @@ stack은 양 방향으로 정보의 삽입, 삭제, 조회가 이루어지지 �
 스택이 비어있지 않다면(중요) 스택의 최상단 원소를 조회 후 제거 가능한 pop() <br>
 스택의 용량이 초과되지 않았다면(중요) 스택의 최상단에 새로운 원소를 추가 가능한 push()
 스택이 비어있다면 true, 아니라면 false를 반환하는 empty() <br>
-스택의 용량이 다 찼다면 true, 아니라면 false를 반환하는 full() <br>
+스택의 사이즈가 얼마인지 알려주는 size() <br>
+배열 기반의 스택의 용량이 다 찼다면 true, 아니라면 false를 반환하는 full() <br> 
 
-3) 구현
+## 3) 구현
 
 python : 스택을 따로 제공하지 않고, 만약 사용한다면 dequeue나 list를 사용하거나 class를 사용하여 구현함.
-
-
-
-
 c++ : #include <stack> 이후 사용 가능.
+c : linked list의 형태로 구현하거나, 배열 기반의 구조체 사용.
+
+python code)
+
+class Stack :
+
+    def __init__ (self) :
+        self.__stack__=[]
+
+    def top(self) :    
+        try :
+            return self.stack[-1]
+        except Exception as e:    
+                print("stack's size zero. Try push!", e)
+    
+    def pop(self) :
+        try :
+            return self.stack[-1]
+        except Exception as e:    
+                print("stack's size zero. Try push!", e)
+                
+    def push(self, data) : 
+        (self.__stack__).append(data)
+   
+    def empty(self) :
+        if len(self.__stack__) == 0 :
+            return True
+        else :
+            return False
+        
+    def size(self) :
+        return len(self.__stack__)        
+    
+        
+    
+            
+    
+    
+    
+    
+    
