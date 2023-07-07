@@ -27,27 +27,32 @@ python : 스택을 따로 제공하지 않고, 만약 사용한다면 dequeue나
 c++ : #include <stack> 이후 사용 가능. <br>
 c : linked list의 형태로 구현하거나, 배열 기반의 구조체 사용. <br>
 
-python code) <br> <br>
+python code) 
 
 class Stack :
     def __init__ (self) :
         self.__stack__=[]
+    
     def top(self) :    
         try :
             return self.stack[-1]
         except Exception as e:    
                 print("stack's size zero. Try push!", e)
+    
     def pop(self) :
         try :
             return self.stack[-1]
         except Exception as e:    
                 print("stack's size zero. Try push!", e)      
+    
     def push(self, data) : 
         (self.__stack__).append(data)
+    
     def empty(self) :
         if len(self.__stack__) == 0 :
             return True
         else :
             return False
+    
     def size(self) :
         return len(self.__stack__) 
