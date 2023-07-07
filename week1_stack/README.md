@@ -30,6 +30,8 @@ c : linked list의 형태로 구현하거나, 배열 기반의 구조체 사용.
 
 # 3-1) python code 
 <br>
+
+
 class Stack :
     def __init__ (self) :
         self.__stack__=[]
