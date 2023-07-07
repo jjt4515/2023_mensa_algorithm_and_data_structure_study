@@ -26,6 +26,7 @@ stack은 양 방향으로 정보의 삽입, 삭제, 조회가 이루어지지 �
 python : 스택을 따로 제공하지 않고, 만약 사용한다면 dequeue나 list를 사용하거나 class를 사용하여 구현함. <br>
 c++ : #include <stack> 이후 사용 가능. <br>
 c : linked list의 형태로 구현하거나, 배열 기반의 구조체 사용. <br>
+week1_stack 내부 python_stack.py 파일 참조.
 
      
         
