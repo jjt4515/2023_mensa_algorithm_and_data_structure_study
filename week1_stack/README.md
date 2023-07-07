@@ -27,7 +27,8 @@ python : 스택을 따로 제공하지 않고, 만약 사용한다면 dequeue나
 c++ : #include <stack> 이후 사용 가능. <br>
 c : linked list의 형태로 구현하거나, 배열 기반의 구조체 사용. <br>
 
-python code) 
+
+# 3-1) python code 
 
 class Stack :
     def __init__ (self) :
