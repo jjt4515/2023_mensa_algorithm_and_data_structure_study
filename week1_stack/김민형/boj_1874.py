@@ -1,3 +1,5 @@
+# 아직 못 품 **
+
 n = int(input())
 res = []
 temp = []
