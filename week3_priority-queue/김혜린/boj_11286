@@ -1,0 +1,28 @@
+"""
+절댓값 힙 - 🥈1
+
+1. 어 문제도 힙을 통한 우선순위 큐의 기본 구현 문제인데, 절댓값이 들어가서 조금 까다로울 수 있다.
+2. 하지만 똑같이 min_heap으로 힙에 push 시에, 튜플형태로 (절댓값, 실제값) 으로 추가하면 빠르게 해결가능
+"""
+
+import sys
+import heapq
+
+hq = []
+n = int(sys.stdin.readline())
+
+for _ in range(n):
+    tmp_num = int(sys.stdin.readline())
+
+    if tmp_num == 0:
+        try:
+            print(heapq.heappop(hq)[1])
+        except:
+            print(0)
+
+    elif tmp_num < 0:
+        tmp_tuple = (abs(tmp_num), tmp_num)
+        heapq.heappush(hq, tmp_tuple)
+    else:
+        tmp_tuple = (tmp_num, tmp_num)
+        heapq.heappush(hq, tmp_tuple)
