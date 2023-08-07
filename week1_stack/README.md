@@ -29,11 +29,11 @@ c : linked list의 형태로 구현하거나, 배열 기반의 구조체 사용.
 week1_stack 내부 python_stack.py 파일 참조.
 
 ## 4) 문제
-김건호 : codeup_3130, codeup_4654
-김혜린 :
-김민형 : 
-정진택 : boj_17162, boj_23300
-윤소현 : boj_25501, boj_9996
+김건호 : codeup_3130, codeup_4654<br>
+김혜린 :<br>
+김민형 : <br>
+정진택 : boj_17162, boj_23300 <br> 
+윤소현 : boj_25501, boj_9996 <br>
      
         
     
