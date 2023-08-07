@@ -1,0 +1,51 @@
+"""
+2606 바이러스 - 🥈3
+
+1. 11725 문제 해결 시 사용한 방법 응용
+2. tree 구조를 딕셔너리로 구현
+3. 각 노드의 부모를 큐(리스트)로 구현해서 찾음
+4. 그리고 이제 1번과 연결된 노드를 찾기 위해 related_node라는 리스트를 만들고 부모들을 탐색해가며 추가
+5. 시간복잡도 : O(n) .. 추정
+- 1. while문을 통해 BFS, 너비 우선 탐색을 통해 노드의 부모를 찾는 과정 -> O(n) : 노드 한번씩 순회
+- 2. 찾은 부모노드들을 기반으로 while문으로 related_node 추가 과정 -> O(n)
+"""
+
+import sys
+from collections import deque
+
+def solution(n, tree):
+    node = deque([1]) # 노드
+    parent = [-1] * (n+1) # 부모 찾기 (BFS)
+    while node:
+        su = node.popleft()
+        for index in tree[su]:
+            if index != 1 and parent[index] == -1:
+                parent[index] = su
+                node.append(index)
+
+    change = True # related_node가 변할때까지!!
+    related_node = deque([1])
+
+    while change:
+        change = False
+        for i, nd in enumerate(parent):
+            if nd in related_node:
+                related_node.append(i)
+                parent[i] = -1
+                change = True
+    print(len(set(related_node))-1)
+
+
+if __name__=="__main__":
+    n = int(sys.stdin.readline())
+    pair = int(sys.stdin.readline())
+
+    tree = dict()
+    for i in range(1, n+1):
+        tree[i] = []
+
+    for i in range(pair):
+        n1, n2 = map(int, sys.stdin.readline().split())
+        tree[n1].append(n2)
+        tree[n2].append(n1)
+    solution(n, tree)

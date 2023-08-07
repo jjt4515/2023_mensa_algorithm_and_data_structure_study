@@ -1,0 +1,34 @@
+"""
+11725 트리의 부모 찾기 - 🥈3
+
+1. 이 문제는 트리나 노드 자체의 구현보다는 탐색이 중점 (BFS)
+2. 탐색하는 순서를 잘 파악하면 금방 해결가능
+3. 난 접근이 어려워서 서치해서 풀음,, ㅠ
+"""
+
+import sys
+from collections import deque
+
+def solution(n, tree):
+    node = deque([1])
+    parent = [0] * (n+1)
+
+    while node: # node 구현해서 순서대로 확인하기 (이부분 구현이 나는 어려웟삼)
+        cur = node.popleft()
+        for i in tree[cur]:
+            if parent[i] == 0 and i != 1: # 부모없거나, 루트 아닐때
+                parent[i] = cur
+                node.append(i) # 다음 확인할 노드
+    for i in range(2, n+1):
+        print(parent[i])
+
+if __name__ == "__main__":
+    n = int(sys.stdin.readline())
+    tree = dict() # 트리보단 딕셔너리롤 구현해서 탐색 중점
+    for i in range(1, n+1):
+        tree[i] = []
+    for i in range(n-1):
+        n1, n2 = map(int, sys.stdin.readline().split())
+        tree[n1].append(n2)
+        tree[n2].append(n1)
+    solution(n, tree)

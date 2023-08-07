@@ -1,0 +1,27 @@
+"""
+카드합체놀이 - 🥈1
+
+1. 어려운 문제가 아닌 힙으로 우선순위 큐를 구현하는 간단한 연습 문제
+2. heapq 라이브러리 사용, min heap이 기본이기 때문에 작은 두 수끼리 더해서 문제 해결 가능
+"""
+
+from sys import stdin
+import heapq
+
+n, m = map(int, stdin.readline().split())
+
+# heap 생성
+cards = []
+card_list = [int(x) for x in stdin.readline().split()]
+
+for card in card_list:
+    heapq.heappush(cards, card)
+
+for _ in range(m):
+    card1 = heapq.heappop(cards)
+    card2 = heapq.heappop(cards)
+
+    heapq.heappush(cards, card1 + card2)
+    heapq.heappush(cards, card1 + card2)
+
+print(sum(cards))
