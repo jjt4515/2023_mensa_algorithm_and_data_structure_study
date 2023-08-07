@@ -15,3 +15,7 @@
 ### 4. [BOJ] 17501 - 수식트리 🥇2 (풀이중)
 #### 문제 : https://www.acmicpc.net/problem/17501
 #### 내블로그 :
+---
+### 5. [BOJ] 6416 - 트리인가? (난도책정X) (풀이중)
+#### 문제 : https://www.acmicpc.net/problem/6416
+#### 내블로그 : https://helen6339.tistory.com/118
