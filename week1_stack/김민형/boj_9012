@@ -1,0 +1,42 @@
+n = int(input())
+arrays = []
+for array in range(n):
+    arrays.append(str(input()))
+
+def check(array):
+    temp = []
+    for element in array:
+        if element == '(':
+            temp.append(element)
+        else:
+            if temp:
+                temp.pop()
+            else:
+                return('NO')
+    if len(temp) > 0:
+        return('NO')
+    elif len(temp) == 0:
+        return 'YES'
+            
+for array in arrays:
+    print(check(array))
+
+
+
+n = int(input())
+
+for _ in range(n):
+    s = 0
+    stack = list(input())
+    for ele in stack:
+        if ele == '(':
+            s += 1
+        elif ele ==')':
+            s -= 1
+        if s < 0:
+            print('NO')
+            break
+    if s > 0:
+        print('NO')
+    elif s == 0:
+        print('YES')
