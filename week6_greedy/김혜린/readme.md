@@ -12,9 +12,9 @@
 #### 문제 : https://www.acmicpc.net/problem/1389
 #### 내블로그 : https://helen6339.tistory.com/135
 ---
-### 4. [BOJ] 1916 - 최소비용구하기 🥇3 (풀이중)
+### 4. [BOJ] 1916 - 최소비용구하기 🥇3
 #### 문제 : https://www.acmicpc.net/problem/1916
-#### 내블로그 : 
+#### 내블로그 : https://helen6339.tistory.com/136
 ---
 ### 4. [BOJ] 1238 - 파티 🥇3 (풀이중)
 #### 문제 : https://www.acmicpc.net/problem/1238
